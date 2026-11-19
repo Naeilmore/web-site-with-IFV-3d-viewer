@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error-container":"#ffdad6","surface-container-high":"#dce9ff","tertiary-fixed-dim":"#93ccff","border-subtle":"#E2E8F0","surface-container-low":"#eff4ff","status-unverified-bg":"#FEF2F2","on-secondary-fixed":"#111c2d","surface-bright":"#f8f9ff","primary":"#000000","status-verified-bg":"#ECFDF5","on-tertiary-container":"#188ace","tertiary":"#000000","status-verify-needed-bg":"#FFFBEB","on-surface-variant":"#45464d","on-secondary-container":"#586377","on-primary":"#ffffff","surface-container":"#e5eeff","tertiary-fixed":"#cce5ff","on-error-container":"#93000a","surface":"#f8f9ff","outline":"#76777d","on-primary-container":"#7c839b","primary-fixed-dim":"#bec6e0","secondary-fixed-dim":"#bcc7de","on-primary-fixed-variant":"#3f465c","on-tertiary":"#ffffff","slate-bg":"#F8FAFC","surface-dim":"#cbdbf5","on-surface":"#0b1c30","status-verify-needed":"#D97706","on-primary-fixed":"#131b2e","inverse-surface":"#213145","surface-container-highest":"#d3e4fe","inverse-primary":"#bec6e0","outline-variant":"#c6c6cd","surface-variant":"#d3e4fe","surface-tint":"#565e74","on-tertiary-fixed":"#001d31","on-tertiary-fixed-variant":"#004b73","secondary":"#545f73","on-error":"#ffffff","primary-container":"#131b2e","surface-card":"#FFFFFF","status-analytical":"#2563EB","status-analytical-bg":"#EFF6FF","status-verified":"#059669","primary-fixed":"#dae2fd","inverse-on-surface":"#eaf1ff","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","secondary-fixed":"#d8e3fb","on-background":"#0b1c30","secondary-container":"#d5e0f8","on-secondary-fixed-variant":"#3c475a","tertiary-container":"#001d31","status-unverified":"#DC2626","steel-accent-hover":"#0369A1","background":"#f8f9ff","error":"#ba1a1a"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-sm":"0.75rem","space-lg":"2rem","space-xs":"0.375rem","space-xl":"3.5rem","margin-lg":"4rem",margin:"1.25rem","margin-md":"2.5rem",gutter:"1.5rem","gutter-lg":"2rem","space-md":"1.25rem"},fontFamily:{"headline-lg-mobile":["Inter"],"body-sm":["Noto Sans"],"label-code":["JetBrains Mono"],"headline-xl":["Inter"],"label-caption":["Noto Sans"],"body-lg":["Noto Sans"],"body-md":["Noto Sans"],"headline-md":["Inter"],"headline-xl-mobile":["Inter"],"headline-sm":["Inter"],"label-tag":["Noto Sans"],"headline-lg":["Inter"]},fontSize:{"headline-lg-mobile":["22px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"700"}],"body-sm":["13px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"label-code":["12px",{lineHeight:"18px",letterSpacing:"0.02em",fontWeight:"500"}],"headline-xl":["36px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-caption":["12px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"400"}],"body-lg":["18px",{lineHeight:"32px",letterSpacing:"-0.005em",fontWeight:"400"}],"body-md":["15px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"400"}],"headline-md":["20px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-xl-mobile":["26px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"700"}],"headline-sm":["16px",{lineHeight:"26px",letterSpacing:"0em",fontWeight:"600"}],"label-tag":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"600"}],"headline-lg":["28px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-6xl mx-auto px-8 flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-primary-fixed text-[20px]">shield</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">호주 국방 산업참여 전략 브리핑</span><span class="font-label-code text-label-code text-secondary">ADIS Briefing · Strategic Intelligence Matrix</span></div></div><nav class="hidden xl:flex items-center gap-space-sm" data-active-classes="bg-primary-container text-on-primary font-headline-sm"><a aria-current="page" class="px-3 py-1.5 rounded-lg transition-colors bg-primary-container text-on-primary font-headline-sm" data-path="executive-briefing" href="index.html">종합 브리핑</a><a class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-body-md transition-colors" data-path="acquisition-programs" href="index.html">국방전력 사업군</a><a class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-body-md transition-colors" data-path="aic-opportunities" href="index.html">산업참여(AIC) 기회</a><a class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-body-md transition-colors" data-path="compliance-roadmap" href="index.html">규제·인증 로드맵</a></nav><div class="flex items-center gap-space-sm"><div class="hidden md:flex items-center gap-space-xs px-3 py-1 rounded bg-surface-container-low text-secondary font-label-code text-label-code"><span class="material-symbols-outlined text-[14px]">event</span><span>검토 기준일 2026.11.19</span></div><button class="hidden sm:flex items-center px-3 py-1.5 rounded-lg bg-surface-card text-on-surface font-body-sm hover:bg-surface-container-low transition-colors" type="button" onclick="location.href='index.html'" style="cursor: pointer;"><span class="material-symbols-outlined text-[16px] mr-1 text-secondary">description</span>보고서 전문 보기</button><div class="flex items-center gap-1"><button aria-label="보고서 인쇄" class="w-8 h-8 rounded-lg flex items-center justify-center text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" type="button" onclick="location.href='index.html'" style="cursor: pointer;"><span class="material-symbols-outlined text-[18px]">print</span></button><button aria-label="브리핑 공유" class="w-8 h-8 rounded-lg flex items-center justify-center text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" type="button" onclick="location.href='index.html'" style="cursor: pointer;"><span class="material-symbols-outlined text-[18px]">share</span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="max-w-6xl mx-auto py-12 px-8"><div class="flex flex-col w-full">
+
+<section aria-labelledby="vehicle-viewer-title" style="margin: 0 0 3.5rem;">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:12px;margin-bottom:14px;">
+    <div><p style="margin:0 0 4px;color:#526575;font-size:12px;font-weight:700;letter-spacing:.12em;">INTERACTIVE 3D VIEWER</p><h2 id="vehicle-viewer-title" style="margin:0;font-size:24px;font-weight:700;">8륜 장갑차 3D 둘러보기</h2></div>
+    <p style="margin:0;color:#526575;font-size:14px;">모델 회전 · 포탑 및 포신 조절 · 분해 보기</p>
+  </div>
+  <iframe title="인터랙티브 3D 장갑차 뷰어" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;장갑차 3D 스튜디오&lt;/title&gt;&lt;style&gt;
+*{box-sizing:border-box}body{margin:0;background:#161b19;color:#e9eee9;font-family:Arial,'Malgun Gothic',sans-serif}header{height:70px;padding:0 28px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #3b443d;background:#202722}h1{font-size:18px;letter-spacing:.04em;margin:0}.sub{color:#a5b3a4;font-size:13px}main{display:grid;grid-template-columns:1fr 310px;height:calc(100vh - 70px)}#stage{position:relative;min-height:450px;background:radial-gradient(circle at 50% 42%,#edf0ec,#a9b0a9)}canvas{display:block;width:100%;height:100%;touch-action:none}.hint{position:absolute;bottom:22px;left:25px;color:#26352a;background:#ffffffbf;padding:10px 14px;border-radius:5px;font-size:13px}.badge{position:absolute;top:25px;left:25px;color:#273a2c;font-size:12px;font-weight:bold;letter-spacing:.14em}.panel{padding:26px;overflow:auto;background:#202722}.panel h2{font-size:12px;letter-spacing:.16em;color:#9eae9e;margin:0 0 22px}.group{border-top:1px solid #465147;padding:20px 0}.group h3{font-size:15px;margin:0 0 16px}.row{display:flex;justify-content:space-between;align-items:center;margin:13px 0;color:#cbd5ca;font-size:14px}.row output{color:#e1edb7;font-variant-numeric:tabular-nums}input[type=range]{width:100%;accent-color:#b5c78b;cursor:pointer}button{border:1px solid #687765;background:#303b31;color:#edf2e9;padding:11px;border-radius:4px;cursor:pointer;font-size:14px}button:hover,button.active{background:#b5c78b;color:#1d281e;border-color:#b5c78b}.buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px}.wide{width:100%}.note{font-size:13px;color:#9eac9c;line-height:1.6}.error{position:absolute;inset:30%;color:#3b2929;text-align:center}@media(max-width:760px){header{height:60px;padding:0 16px}.sub{display:none}main{height:auto;display:flex;flex-direction:column}#stage{height:55vh;min-height:360px}.panel{padding:20px}.hint{bottom:12px;left:12px}.group{padding:15px 0}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;header&gt;&lt;div&gt;&lt;h1&gt;ARMORED VEHICLE &lt;span style=&quot;color:#aabf85&quot;&gt;/ 3D STUDIO&lt;/span&gt;&lt;/h1&gt;&lt;/div&gt;&lt;div class=&quot;sub&quot;&gt;8×8 장갑차 · 인터랙티브 모델&lt;/div&gt;&lt;/header&gt;&lt;main&gt;&lt;section id=&quot;stage&quot;&gt;&lt;div class=&quot;badge&quot;&gt;INTERACTIVE 3D VIEWER&lt;/div&gt;&lt;div class=&quot;hint&quot;&gt;드래그 회전 · 휠 확대/축소 · 터치 드래그&lt;/div&gt;&lt;/section&gt;&lt;aside class=&quot;panel&quot;&gt;&lt;h2&gt;MODEL CONTROLS&lt;/h2&gt;&lt;div class=&quot;group&quot;&gt;&lt;h3&gt;시점&lt;/h3&gt;&lt;div class=&quot;buttons&quot;&gt;&lt;button data-view=&quot;front&quot;&gt;정면&lt;/button&gt;&lt;button data-view=&quot;side&quot;&gt;측면&lt;/button&gt;&lt;button data-view=&quot;top&quot;&gt;상단&lt;/button&gt;&lt;button data-view=&quot;iso&quot;&gt;기본 시점&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group&quot;&gt;&lt;h3&gt;포탑과 포신&lt;/h3&gt;&lt;div class=&quot;row&quot;&gt;&lt;label for=&quot;turret&quot;&gt;포탑 회전&lt;/label&gt;&lt;output id=&quot;tv&quot;&gt;0°&lt;/output&gt;&lt;/div&gt;&lt;input id=&quot;turret&quot; type=&quot;range&quot; min=&quot;-180&quot; max=&quot;180&quot; value=&quot;0&quot;&gt;&lt;div class=&quot;row&quot;&gt;&lt;label for=&quot;barrel&quot;&gt;포신 상하&lt;/label&gt;&lt;output id=&quot;bv&quot;&gt;0°&lt;/output&gt;&lt;/div&gt;&lt;input id=&quot;barrel&quot; type=&quot;range&quot; min=&quot;-10&quot; max=&quot;35&quot; value=&quot;0&quot;&gt;&lt;/div&gt;&lt;div class=&quot;group&quot;&gt;&lt;h3&gt;분해 보기&lt;/h3&gt;&lt;div class=&quot;row&quot;&gt;&lt;label for=&quot;explode&quot;&gt;부품 분리&lt;/label&gt;&lt;output id=&quot;ev&quot;&gt;0%&lt;/output&gt;&lt;/div&gt;&lt;input id=&quot;explode&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;0&quot;&gt;&lt;div class=&quot;buttons&quot;&gt;&lt;button id=&quot;explodeBtn&quot;&gt;분해하기&lt;/button&gt;&lt;button id=&quot;assembleBtn&quot;&gt;조립하기&lt;/button&gt;&lt;/div&gt;&lt;p class=&quot;note&quot;&gt;포탑, 차체 상부, 바퀴가 분리됩니다. 슬라이더로 간격을 조절할 수 있습니다.&lt;/p&gt;&lt;/div&gt;&lt;button class=&quot;wide&quot; id=&quot;reset&quot;&gt;모두 초기화&lt;/button&gt;&lt;p class=&quot;note&quot;&gt;참고 이미지의 형태를 재해석한 3D 모델입니다. 내부에는 사람이 없습니다.&lt;/p&gt;&lt;/aside&gt;&lt;/main&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js&quot;&gt;&lt;/script&gt;&lt;script&gt;
+if(typeof THREE==='undefined'){document.querySelector('#stage').insertAdjacentHTML('beforeend','&lt;div class=&quot;error&quot;&gt;3D 라이브러리를 불러오지 못했습니다.&lt;br&gt;인터넷 연결을 확인한 뒤 다시 열어 주세요.&lt;/div&gt;')}else{
+const stage=document.getElementById('stage'), scene=new THREE.Scene();scene.background=new THREE.Color(0xc7cdc8);scene.fog=new THREE.Fog(0xc7cdc8,18,38);
+const camera=new THREE.PerspectiveCamera(35,1,.1,100),renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputColorSpace=THREE.SRGBColorSpace;stage.appendChild(renderer.domElement);
+scene.add(new THREE.HemisphereLight(0xf2f6f2,0x5a6556,2));let sun=new THREE.DirectionalLight(0xffffff,2.6);sun.position.set(5,12,7);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);sun.shadow.camera.left=-10;sun.shadow.camera.right=10;sun.shadow.camera.top=10;sun.shadow.camera.bottom=-10;scene.add(sun);let fill=new THREE.DirectionalLight(0xc5d2bd,1);fill.position.set(-8,5,-5);scene.add(fill);
+const olive=new THREE.MeshStandardMaterial({color:0x596348,roughness:.8,metalness:.32}), light=new THREE.MeshStandardMaterial({color:0x707b59,roughness:.8,metalness:.25}), dark=new THREE.MeshStandardMaterial({color:0x252b25,roughness:.8,metalness:.25}), rubber=new THREE.MeshStandardMaterial({color:0x252a29,roughness:.95}), tread=new THREE.MeshStandardMaterial({color:0x343b38,roughness:.95}), steel=new THREE.MeshStandardMaterial({color:0x444c46,roughness:.5,metalness:.7}), glass=new THREE.MeshPhysicalMaterial({color:0x182d32,roughness:.25,metalness:.4,clearcoat:1}), lamp=new THREE.MeshStandardMaterial({color:0xe7f1df,emissive:0xc9dcc8,emissiveIntensity:.8}), amber=new THREE.MeshStandardMaterial({color:0xffaa35,emissive:0xe66a00,emissiveIntensity:1});
+function box(g,w,h,d,x,y,z,m,rx=0,ry=0,rz=0){let o=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);o.position.set(x,y,z);o.rotation.set(rx,ry,rz);o.castShadow=true;o.receiveShadow=true;g.add(o);return o}function cyl(g,r1,r2,h,x,y,z,m,rz=0,rx=0){let o=new THREE.Mesh(new THREE.CylinderGeometry(r1,r2,h,24),m);o.position.set(x,y,z);o.rotation.set(rx,0,rz);o.castShadow=true;g.add(o);return o}function sphere(g,r,x,y,z,m){let o=new THREE.Mesh(new THREE.SphereGeometry(r,10,8),m);o.position.set(x,y,z);g.add(o);return o}function bolt(g,x,y,z){sphere(g,.035,x,y,z,steel)}
+const floor=new THREE.Mesh(new THREE.PlaneGeometry(200,200),new THREE.MeshStandardMaterial({color:0xc6cbc6,roughness:.9}));floor.rotation.x=-Math.PI/2;floor.receiveShadow=true;scene.add(floor);
+let car=new THREE.Group();scene.add(car); // front is +X
+const lower=new THREE.Group();car.add(lower);box(lower,6.9,1.05,2.75,-.25,1.25,0,olive);box(lower,6.4,.45,2.45,-.35,.78,0,dark);box(lower,1.3,.9,2.55,3.15,1.25,0,olive,0,0,-.22);
+// upper hull separates upward
+const upper=new THREE.Group();car.add(upper);box(upper,5.8,.75,2.78,-.65,2.05,0,olive);box(upper,2.35,.5,2.7,2.05,2.12,0,light,0,0,-.16);box(upper,1.25,.44,2.6,3.24,1.87,0,olive,0,0,-.18);
+// windshields sloping on front roof
+for(let s of [-1,1]){box(upper,1.15,.065,1.12,2.14,2.47,s*.62,dark,0,0,-.30);box(upper,1.02,.07,.98,2.14,2.51,s*.62,glass,0,0,-.30);box(upper,.8,.035,.035,2.23,2.57,s*.61,steel,0,.18,-.30);box(upper,.35,.23,.28,2.7,2.39,s*1.28,olive);box(upper,.12,.5,.1,2.63,2.45,s*1.61,steel);box(upper,.22,.46,.31,2.6,2.72,s*1.68,dark);}
+// armor side panels and bolts
+for(let s of [-1,1]){for(let i=0;i&lt;6;i++){let x=-3.05+i*.98;box(upper,.91,.63,.09,x,2.03,s*1.43,i%2?olive:light,0,0,(i===5?-.12:0));for(let a of [-1,1])for(let b of [-1,1])bolt(upper,x+a*.37,2.03+b*.24,s*1.49)}for(let i=0;i&lt;7;i++)box(upper,.78,.1,.15,-3+i*.94,2.48,s*1.25,light);box(upper,1,.12,.22,-2.4,2.52,s*.85,dark);for(let j=0;j&lt;5;j++)box(upper,.08,.025,.18,-2.78+j*.18,2.6,s*.85,steel)}
+// nose, lamps, towing rings
+for(let s of [-1,1]){box(upper,.18,.27,.68,3.86,1.84,s*.91,dark);for(let i=0;i&lt;3;i++)sphere(upper,.095,3.97,1.86,s*(.7+i*.21),i===2?amber:lamp);let ring=new THREE.Mesh(new THREE.TorusGeometry(.14,.035,8,20),steel);ring.position.set(3.95,1.26,s*.85);ring.rotation.y=Math.PI/2;upper.add(ring)}
+// wheels with patterned treads
+const wheels=[];for(let s of [-1,1])for(let x of [-2.65,-.95,.8,2.48]){let w=new THREE.Group();w.position.set(x,.79,s*1.52);car.add(w);wheels.push({obj:w,side:s,base:w.position.clone()});cyl(w,.79,.79,.52,0,0,0,rubber,0,Math.PI/2);cyl(w,.52,.52,.55,0,0,0,dark,0,Math.PI/2);cyl(w,.40,.40,.58,0,0,0,light,0,Math.PI/2);cyl(w,.25,.25,.60,0,0,0,olive,0,Math.PI/2);for(let i=0;i&lt;10;i++){let a=i*Math.PI*2/10;sphere(w,.035,.33*Math.cos(a),.33*Math.sin(a),s*.31,steel)}for(let i=0;i&lt;28;i++){let a=i*Math.PI*2/28;for(let j of [-1,0,1]){let t=box(w,.19,.12,.17,.76*Math.sin(a),.76*Math.cos(a),j*.18,tread,0,0,-a);t.rotation.y=j*.15}}}
+// turret assembly
+let turret=new THREE.Group();turret.position.set(-.45,2.5,0);car.add(turret);cyl(turret,1.05,1.05,.22,0,.03,0,dark);cyl(turret,1.22,1.05,.22,0,.18,0,olive);box(turret,2.25,.68,2.0,0,.56,0,olive);box(turret,1.65,.3,1.7,-.1,.98,0,light);for(let s of [-1,1]){box(turret,1.8,.52,.08,-.1,.63,s*1.03,light);for(let x of [-.85,-.2,.55])for(let y of [.43,.8])bolt(turret,x,y,s*1.09);box(turret,.6,.28,.25,.65,.83,s*.85,olive)}box(turret,.65,.42,.7,.55,1.13,-.4,olive);box(turret,.52,.4,.55,-.55,1.25,.35,olive);cyl(turret,.13,.13,.04,.82,1.15,-.4,glass,Math.PI/2);cyl(turret,.15,.15,.04,-.28,1.27,.35,glass,Math.PI/2);
+let gun=new THREE.Group();gun.position.set(.95,.6,0);turret.add(gun);box(gun,.7,.46,.52,.2,0,0,dark);cyl(gun,.19,.19,.65,.5,0,0,steel,Math.PI/2);cyl(gun,.11,.13,2.8,2.12,0,0,steel,Math.PI/2);cyl(gun,.15,.15,.22,3.58,0,0,dark,Math.PI/2);cyl(gun,.085,.085,.02,3.7,0,0,dark,Math.PI/2);
+for(let z of [-.6,.35]){cyl(upper,.13,.16,.32,-2.7,2.65,z,dark);cyl(upper,.035,.035,1.9,-2.7,3.65,z,steel)}
+let state={az:2.25,el:.38,dist:13},target=new THREE.Vector3(0,1.55,0);function cameraUpdate(){camera.position.set(target.x+state.dist*Math.cos(state.el)*Math.cos(state.az),target.y+state.dist*Math.sin(state.el),target.z+state.dist*Math.cos(state.el)*Math.sin(state.az));camera.lookAt(target)}function resize(){let w=stage.clientWidth,h=stage.clientHeight;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix()}window.addEventListener('resize',resize);resize();cameraUpdate();
+let drag=false,lastX=0,lastY=0;renderer.domElement.addEventListener('pointerdown',e=&gt;{drag=true;lastX=e.clientX;lastY=e.clientY;renderer.domElement.setPointerCapture(e.pointerId)});renderer.domElement.addEventListener('pointermove',e=&gt;{if(!drag)return;state.az-=(e.clientX-lastX)*.007;state.el=Math.max(.05,Math.min(1.48,state.el+(e.clientY-lastY)*.007));lastX=e.clientX;lastY=e.clientY;cameraUpdate()});renderer.domElement.addEventListener('pointerup',()=&gt;drag=false);renderer.domElement.addEventListener('wheel',e=&gt;{e.preventDefault();state.dist=Math.max(7,Math.min(22,state.dist+e.deltaY*.01));cameraUpdate()},{passive:false});
+const tr=document.querySelector('#turret'),br=document.querySelector('#barrel'),ex=document.querySelector('#explode');function update(){let v=+ex.value/100;turret.rotation.y=-tr.value*Math.PI/180;gun.rotation.z=br.value*Math.PI/180;turret.position.y=2.5+v*2;upper.position.y=v*.7;wheels.forEach(w=&gt;{w.obj.position.z=w.base.z+w.side*v*1.3;w.obj.position.y=w.base.y-v*.15});document.querySelector('#tv').textContent=tr.value+'°';document.querySelector('#bv').textContent=br.value+'°';document.querySelector('#ev').textContent=ex.value+'%'}[tr,br,ex].forEach(e=&gt;e.addEventListener('input',update));document.querySelector('#explodeBtn').onclick=()=&gt;{ex.value=100;update()};document.querySelector('#assembleBtn').onclick=()=&gt;{ex.value=0;update()};document.querySelectorAll('[data-view]').forEach(b=&gt;b.onclick=()=&gt;{let views={front:[0,.18],side:[Math.PI/2,.18],top:[Math.PI/2,1.48],iso:[.8,.38]};[state.az,state.el]=views[b.dataset.view];cameraUpdate()});document.querySelector('#reset').onclick=()=&gt;{tr.value=br.value=ex.value=0;state={az:.8,el:.38,dist:13};update();cameraUpdate()};state.az=.8;cameraUpdate();function animate(){requestAnimationFrame(animate);renderer.render(scene,camera)}animate();}
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
+" style="display:block;width:100%;height:720px;border:0;border-radius:12px;box-shadow:0 6px 24px rgba(15,23,42,.12);background:#202722;" loading="eager"></iframe>
+  <p style="margin:10px 0 0;color:#667788;font-size:12px;">참고 이미지를 바탕으로 단순화하여 제작한 모델입니다. 3D 뷰어를 이용하려면 인터넷 연결이 필요합니다.</p>
+</section>
+<!-- SECTION 1: HEADER & EXECUTIVE DISCLOSURE -->
+<section class="relative mb-space-xl">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md mb-space-md">
+<div class="flex flex-col max-w-3xl">
+<div class="flex flex-wrap items-center gap-space-xs mb-space-sm">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-status-verified-bg text-status-verified font-label-code text-label-code">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+            교차검증 완료 (Cross-Verified)
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container text-secondary font-label-code text-label-code">
+            기준일 2026.11.19
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-code text-label-code">
+            식별번호 STRAT-DIDS-AIC-26
+          </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary-container text-primary-fixed font-label-tag text-label-tag">
+            내부 전략검토용 (RESTRICTED EXEC)
+          </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mb-space-xs">
+          호주 국방전력 도입 이후 산업참여 기회 분석
+        </h1>
+<p class="font-headline-sm text-headline-sm text-secondary font-normal">
+          현지 생산·공급망·운영유지(MRO) 관점의 한국 방산기업 진출전략 — 교차검증 반영본
+        </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-body-sm" id="btn-export-pdf" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+          전략 메모 인쇄/저장
+        </button>
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-inverse-surface transition-colors font-body-sm shadow-sm" id="btn-toggle-filters" type="button">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+          사업군 필터 활성화
+        </button>
+</div>
+</div>
+<!-- CORE EXECUTIVE MANDATE CARD -->
+<div class="relative rounded-xl bg-surface-card p-8 shadow-sm overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-status-analytical"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<div class="lg:col-span-8 space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-analytical text-[20px]">insights</span>
+<span class="font-label-tag text-label-tag text-status-analytical uppercase tracking-wider">Executive Takeaway &amp; Policy Paradigm</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            단순 완제품 수출 모델 탈피: "호주 주권 역량 구축을 위한 생태계 통합" 필수
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            호주 국방부의 2026 국방산업개발전략(DIDS26) 및 강화된 AIC(Australian Industry Capability) 감사 지침에 따라, 신규 장비 계약 후 산업 참여는 '현지화 조달 비율(AIC Value %)' 중심에서 <strong class="text-on-surface font-semibold">'주권 정비(MRO) 지속성, 비축 탄약/부품 현지 조립, 시험평가 협력'</strong>으로 축이 전환되었습니다. 계약 공고 없는 단순 양산 공급은 승인이 불가하므로, 현재 열려 있는 2·3차 협력사 하도급 패키지와 장기 MRO 유지 보수 라이선스를 목표로 진입해야 합니다.
+          </p>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-3 p-5 rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-label-caption text-label-caption text-secondary">호주 국방획득 예산(2026-2030)</span>
+<span class="font-label-code text-label-code text-status-verified font-semibold">A$ 84.2B 계획</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-caption text-label-caption text-secondary">한국 관련 기수주 체계</span>
+<span class="font-label-code text-label-code text-on-surface font-semibold">LAND 400-3 / LAND 8116</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-caption text-label-caption text-secondary">AIC 요구수준 평균</span>
+<span class="font-label-code text-label-code text-status-analytical font-semibold">최소 50% ~ 최대 65%</span>
+</div>
+<div class="pt-2">
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-status-analytical h-1.5 rounded-full" style="width: 58%"></div>
+</div>
+<div class="flex justify-between font-label-code text-[11px] text-secondary mt-1">
+<span>현지 조달 이행도 (58%)</span>
+<span>목표 65% (지속 모니터링)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: STRATEGIC TRAFFIC LIGHT DASHBOARD -->
+<section class="mb-space-xl">
+<div class="flex flex-col mb-space-md">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">traffic</span>
+<span class="font-label-tag text-label-tag text-secondary uppercase tracking-wider">Priority Intelligence Assessment</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+        핵심 결론 &amp; 대상별 신호등 요약
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        각 주요 획득 사업별 교차검증 상태, 현재 계약적 유효성 및 한국 기업의 현실적 수주 접근 단계를 4단계 신호등 체계로 구분합니다.
+      </p>
+</div>
+<!-- 4 Traffic Light Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1: 우선 검증 (Emerald) -->
+<div class="group relative rounded-xl bg-surface-card p-6 shadow-sm flex flex-col justify-between transition-all duration-200 hover:shadow-md">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-status-verified-bg text-status-verified font-label-code text-label-code font-semibold">
+<span class="w-2 h-2 rounded-full bg-status-verified"></span>
+              우선 검증
+            </span>
+<span class="font-label-code text-label-code text-secondary">LAND 400-3 / 8116</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">
+              Redback IFV &amp; AS9/AS10
+            </h3>
+<p class="font-label-caption text-label-caption text-secondary">
+              질롱(Geelong) H-ACE 생산 거점 중심 공급망
+            </p>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            현지 승인공급자(Approved Supplier) 등록 절차 진행 즉시 착수. 장갑판재 가공, 포탑 서브모듈, 유압계통 및 정비 키트 대상.
+          </p>
+</div>
+<div class="pt-5 mt-4 space-y-2.5 bg-surface-container-low -mx-6 -mb-6 p-4 rounded-b-xl">
+<div class="flex items-start gap-1.5 text-status-verify-needed font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[16px] shrink-0 mt-0.5">warning</span>
+<span>주의: 기확정 수량 외 추가 배치 물량은 아직 공식 계약 전이므로 과잉 투자 지양</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-code text-label-code text-secondary">추천 행동</span>
+<span class="font-label-code text-label-code text-status-verified font-semibold">현지 법인 벤더 등록</span>
+</div>
+</div>
+</div>
+<!-- Card 2: 선별 검토 (Blue/Analytical) -->
+<div class="group relative rounded-xl bg-surface-card p-6 shadow-sm flex flex-col justify-between transition-all duration-200 hover:shadow-md">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-status-analytical-bg text-status-analytical font-label-code text-label-code font-semibold">
+<span class="w-2 h-2 rounded-full bg-status-analytical"></span>
+              선별 검토
+            </span>
+<span class="font-label-code text-label-code text-secondary">SEA 5000</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">
+              Hunter급 호위함
+            </h3>
+<p class="font-label-caption text-label-caption text-secondary">
+              BAE Systems Maritime Australia 주도 건조
+            </p>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            플랫폼 선체 구조(조선)와 Aegis/Saab 9LV 전투체계 공급망을 엄격히 분리하여 접근. 30년 장기 수명주기 유지부품 타겟팅.
+          </p>
+</div>
+<div class="pt-5 mt-4 space-y-2.5 bg-surface-container-low -mx-6 -mb-6 p-4 rounded-b-xl">
+<div class="flex items-start gap-1.5 text-secondary font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[16px] shrink-0 mt-0.5">info</span>
+<span>영국-호주 간 Tier 1 서플라이 체인이 기형성되어 있어 틈새 센서·특수 밸브 중심 선별</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-code text-label-code text-secondary">추천 행동</span>
+<span class="font-label-code text-label-code text-status-analytical font-semibold">전투체계 외 보조계통 타겟</span>
+</div>
+</div>
+</div>
+<!-- Card 3: 조건부 탐색 (Amber/Alert) -->
+<div class="group relative rounded-xl bg-surface-card p-6 shadow-sm flex flex-col justify-between transition-all duration-200 hover:shadow-md">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-status-verify-needed-bg text-status-verify-needed font-label-code text-label-code font-semibold">
+<span class="w-2 h-2 rounded-full bg-status-verify-needed"></span>
+              조건부 탐색
+            </span>
+<span class="font-label-code text-label-code text-secondary">AIR 6500 Ph.1</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">
+              AIR6500 통합방공망
+            </h3>
+<p class="font-label-caption text-label-caption text-secondary">
+              Lockheed Martin Australia 주계약자
+            </p>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface">T2A 단계 종료</strong>(2026-06-30 종료 확정)에 따라 현재 신규 하도급 참여 경로 차단됨. 차기 트랜치 및 한국 체계 연동 인터페이스만 모니터링.
+          </p>
+</div>
+<div class="pt-5 mt-4 space-y-2.5 bg-surface-container-low -mx-6 -mb-6 p-4 rounded-b-xl">
+<div class="flex items-start gap-1.5 text-status-unverified font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[16px] shrink-0 mt-0.5">cancel</span>
+<span>단기 영업 자원 투입 보류 권고. 호주 C4ISR 아키텍처 연동 규격 사전 조사에 국한</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-code text-label-code text-secondary">추천 행동</span>
+<span class="font-label-code text-label-code text-status-verify-needed font-semibold">후속 트랜치 벤치마킹</span>
+</div>
+</div>
+</div>
+<!-- Card 4: 중장기 검토 (Purple/Subtle) -->
+<div class="group relative rounded-xl bg-surface-card p-6 shadow-sm flex flex-col justify-between transition-all duration-200 hover:shadow-md">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-on-surface font-label-code text-label-code font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              중장기 검토
+            </span>
+<span class="font-label-code text-label-code text-secondary">XL-AUV &amp; GWEO</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">
+              Ghost Shark &amp; 유도무기
+            </h3>
+<p class="font-label-caption text-label-caption text-secondary">
+              Anduril Australia 및 호주 유도무기청(GWEO)
+            </p>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            비민감 기구물 모듈, 가혹환경 배터리 패키징, 해상 회수 MRO 시험평가부터 실증 진입. 미·호 기술유출 통제(ITAR) 면밀 검토 요망.
+          </p>
+</div>
+<div class="pt-5 mt-4 space-y-2.5 bg-surface-container-low -mx-6 -mb-6 p-4 rounded-b-xl">
+<div class="flex items-start gap-1.5 text-secondary font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[16px] shrink-0 mt-0.5">verified_user</span>
+<span>국방보안인가(DISP) Level 2 및 사이버 에센셜(Essential 8) 취득 선행 필수</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-code text-label-code text-secondary">추천 행동</span>
+<span class="font-label-code text-label-code text-on-surface font-semibold">공동 R&amp;D 컨소시엄 기획</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: 4-STAGE PIPELINE INFOGRAPHIC -->
+<section class="mb-space-xl p-8 rounded-xl bg-surface-card shadow-sm">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm mb-space-md">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">account_tree</span>
+<span class="font-label-tag text-label-tag text-secondary uppercase tracking-wider">Opportunity Viability Funnel</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+          사업기회와 실현 가능성 4단계 파이프라인
+        </h2>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-status-verify-needed-bg text-status-verify-needed font-body-sm">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>AIC 계획과 투자 발표는 실제 신규 발주나 수주 확정을 의미하지 않음</span>
+</div>
+</div>
+<!-- Pipeline Visual Track -->
+<div class="relative grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Step 1 -->
+<div class="relative flex flex-col p-5 rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-code text-[20px] font-bold text-secondary">01</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-tag text-[11px]">거시 분석</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">
+          정책·예산 방향
+        </h4>
+<p class="font-body-sm text-body-sm text-secondary mb-4 leading-relaxed">
+          국방전략검토(NDS) 및 종합투자계획(IIAP)에 반영된 국가 우선순위 영역.
+        </p>
+<div class="mt-auto pt-3 font-label-code text-label-code text-secondary flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>전략적 관심 분야 식별</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col p-5 rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-code text-[20px] font-bold text-status-analytical">02</span>
+<span class="px-2 py-0.5 rounded bg-status-analytical-bg text-status-analytical font-label-tag text-[11px]">공개 데이터</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">
+          공개 AIC·계약
+        </h4>
+<p class="font-body-sm text-body-sm text-secondary mb-4 leading-relaxed">
+          CASG 공시 및 원제작사(Prime)가 호주 정부에 서약한 현지 하도급 의무 목록.
+        </p>
+<div class="mt-auto pt-3 font-label-code text-label-code text-status-analytical flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-status-analytical"></span>
+<span>공급망 검토 및 타당성 분석</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col p-5 rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-code text-[20px] font-bold text-status-verify-needed">03</span>
+<span class="px-2 py-0.5 rounded bg-status-verify-needed-bg text-status-verify-needed font-label-tag text-[11px]">실무 타겟</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">
+          현재 개방된 패키지
+        </h4>
+<p class="font-body-sm text-body-sm text-secondary mb-4 leading-relaxed">
+          ICN Gateway 공고 또는 원제작사 공식 포털에서 실질적으로 입찰 접수 중인 워크 패키지.
+        </p>
+<div class="mt-auto pt-3 font-label-code text-label-code text-status-verify-needed flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-status-verify-needed"></span>
+<span>실질적 수주 영업 후보</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative flex flex-col p-5 rounded-lg bg-primary-container text-on-primary">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-code text-[20px] font-bold text-primary-fixed">04</span>
+<span class="px-2 py-0.5 rounded bg-inverse-surface text-primary-fixed font-label-tag text-[11px]">최종 수주</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-primary mb-2">
+          공급자 선정·계약
+        </h4>
+<p class="font-body-sm text-body-sm text-primary-fixed leading-relaxed mb-4">
+          DISP 보안 인가 및 호주 국방 규격(ASDEFCON) 충족 후 최종 발주서(PO) 체결.
+        </p>
+<div class="mt-auto pt-3 font-label-code text-label-code text-status-verified flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-status-verified"></span>
+<span class="text-on-primary font-semibold">집행 가능한 수주 달성</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: DETAILED PROGRAM OPPORTUNITY MATRIX -->
+<section class="mb-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm mb-space-md">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">table_chart</span>
+<span class="font-label-tag text-label-tag text-secondary uppercase tracking-wider">Acquisition Program Breakdown</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+          체계별 세부 기회 매트릭스
+        </h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-code text-label-code text-secondary">표시 기준: 실무 접근성 높은 순</span>
+</div>
+</div>
+<!-- Analytical Matrix Table Card -->
+<div class="rounded-xl bg-surface-card shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-primary-container text-on-primary font-label-code text-label-code">
+<th class="py-3.5 px-6 font-semibold w-1/5">체계명 및 획득 사업</th>
+<th class="py-3.5 px-6 font-semibold w-1/4">주요 팩트 &amp; 근거 상태</th>
+<th class="py-3.5 px-6 font-semibold w-1/3">실무 권고 및 집중 접근 분야</th>
+<th class="py-3.5 px-6 font-semibold w-1/5">필수 사전 확인사항</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm">
+<!-- Row 1: Redback IFV -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-5 px-6 align-top">
+<div class="font-headline-sm text-headline-sm text-on-surface">Redback IFV</div>
+<div class="font-label-code text-label-code text-secondary mt-0.5">LAND 400 Phase 3</div>
+<div class="mt-2.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-status-verified-bg text-status-verified font-label-code text-[11px]">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+                    공식 계약 집행 단계
+                  </span>
+</div>
+</td>
+<td class="py-5 px-6 align-top leading-relaxed text-on-surface-variant">
+<div class="space-y-2">
+<p>총 129대 규모 본계약 체결 완료. 빅토리아주 질롱(H-ACE) 제조공장 가동 돌입.</p>
+<div class="p-2 rounded bg-surface-container-low font-label-code text-[11px] text-secondary">
+                    호주 현지화율(AIC) 의무 목표 50% 이상 명시됨.
+                  </div>
+</div>
+</td>
+<td class="py-5 px-6 align-top leading-relaxed text-on-surface-variant">
+<strong class="text-on-surface font-semibold">포탑 내부 모듈, 궤도·현수장치 예비품, 유압계통 벤더 진입.</strong>
+<p class="mt-1 text-secondary">
+                  완제품 생산 이후 향후 30년간 지속될 정비창 레벨 MRO 키트 및 현지 소모성 부품 패키징 제안이 실질적 장기 수익원.
+                </p>
+</td>
+<td class="py-5 px-6 align-top">
+<ul class="space-y-1.5 font-label-caption text-label-caption text-secondary">
+<li class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-status-verified text-[14px]">check</span>
+                    한화에어로스페이스 호주(HAA) 벤더 등록
+                  </li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[14px]">chevron_right</span>
+                    MIL-SPEC 장갑 용접 인증
+                  </li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[14px]">chevron_right</span>
+                    한국 방위사업청 수출허가(E/L)
+                  </li>
+</ul>
+</td>
+</tr>
+<!-- Row 2: AS9 Huntsman & AS10 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-5 px-6 align-top">
+<div class="font-headline-sm text-headline-sm text-on-surface">AS9 / AS10</div>
+<div class="font-label-code text-label-code text-secondary mt-0.5">LAND 8116 Phase 1</div>
+<div class="mt-2.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-status-verified-bg text-status-verified font-label-code text-[11px]">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+                    생산 및 현지 시험평가
+                  </span>
+</div>
+</td>
+<td class="py-5 px-6 align-top leading-relaxed text-on-surface-variant">
+<div class="space-y-2">
+<p>자주포 30문 및 탄약운반차 15대 납품 프로세스 순항. 시험평가 데이터 축적 중.</p>
+<div class="p-2 rounded bg-surface-container-low font-label-code text-[11px] text-secondary">
+                    차기 배치(Phase 2) 추가 획득은 정부 국방지출 재조정에 따라 연기 상태.
+                  </div>
+</div>
+</td>
+<td class="py-5 px-6 align-top leading-relaxed text-on-surface-variant">
+<strong class="text-on-surface font-semibold">155mm 표준 탄약 호환성 보조장비 및 주퇴복좌기 예비부품.</strong>
+<p class="mt-1 text-secondary">
+                  신규 차체 판매보다는 호주 육군 야전 배치 후 운용 안정화를 지원하는 지상지원장비(GSE) 공급 타겟팅.
+                </p>
+</td>
+<td class="py-5 px-6 align-top">
+<ul class="space-y-1.5 font-label-caption text-label-caption text-secondary">
+<li class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-status-verified text-[14px]">check</span>
+                    야전 기동정비 훈련 패키지
+                  </li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[14px]">chevron_right</span>
+                    현지 공구세트 국산화 대체 규격
+                  </li>
+</ul>
+</td>
+</tr>
+<!-- Row 3: Hunter급 호위함 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-5 px-6 align-top">
+<div class="font-headline-sm text-headline-sm text-on-surface">Hunter급 호위함</div>
+<div class="font-label-code text-label-code text-secondary mt-0.5">SEA 5000 Phase 1</div>
+<div class="mt-2.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-status-verify-needed-bg text-status-verify-needed font-label-code text-[11px]">
+<span class="material-symbols-outlined text-[12px]">schedule</span>
+                    건조 척수 재조정 검토
+                  </span>
+</div>
+</td>
+<td class="py-5 px-6 align-top leading-relaxed text-on-surface-variant">
+<div class="space-y-2">
+<p>초기 9척에서 6척으로 감축 조정안 통과. BAE Systems 애들레이드 조선소 건조 착수.</p>
+<div class="p-2 rounded bg-surface-container-low font-label-code text-[11px] text-secondary">
+                    호주 해군 수면함대 검토(Independent Analysis) 결과 일반목적 호위함 별도 추진.
+                  </div>
+</div>
+</td>
+<td class="py-5 px-6 align-top leading-relaxed text-on-surface-variant">
+<strong class="text-on-surface font-semibold">선체 주구조 대신 배관/밸브·공조시스템(HVAC) 및 보조 보기류.</strong>
+<p class="mt-1 text-secondary">
+                  조선소 공급망 진입 장벽이 높으므로 BAE 글로벌 공급망 등록(GSEP)을 통해 간접 납품 경로 확보 필요.
+                </p>
+</td>
+<td class="py-5 px-6 align-top">
+<ul class="space-y-1.5 font-label-caption text-label-caption text-secondary">
+<li class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-status-verified text-[14px]">check</span>
+                    로이드 선급(LR) 특수선 인증
+                  </li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[14px]">chevron_right</span>
+                    BAE 호주 ICN 포털 계정
+                  </li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[14px]">chevron_right</span>
+                    충격/소음(Shock/Vibration) 시험성적
+                  </li>
+</ul>
+</td>
+</tr>
+<!-- Row 4: AIR6500 Phase 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-5 px-6 align-top">
+<div class="font-headline-sm text-headline-sm text-on-surface">AIR6500-1 JAMD</div>
+<div class="font-label-code text-label-code text-secondary mt-0.5">AIR 6500 Phase 1</div>
+<div class="mt-2.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-status-unverified-bg text-status-unverified font-label-code text-[11px]">
+<span class="material-symbols-outlined text-[12px]">do_not_disturb_on</span>
+                    단기 하도급 차단
+                  </span>
+</div>
+</td>
+<td class="py-5 px-6 align-top leading-relaxed text-on-surface-variant">
+<div class="space-y-2">
+<p class="text-error font-semibold">T2A 단계 계약 2026-06-30 공식 완료.</p>
+<p>주계약자인 Lockheed Martin Australia 컨소시엄 구성 완료로 1차 하도급 벤더 라인업 폐쇄됨.</p>
+</div>
+</td>
+<td class="py-5 px-6 align-top leading-relaxed text-on-surface-variant">
+<strong class="text-on-surface font-semibold">향후 천궁-II 또는 한국산 요격체계 연동을 염두에 둔 C2 프로토콜 연구.</strong>
+<p class="mt-1 text-secondary">
+                  현재 열려 있는 하도급 물량은 없으므로 민간 무기체계 패키지 제안은 전면 보류하고 차기 통합 시험 연동 규격만 선제 확보.
+                </p>
+</td>
+<td class="py-5 px-6 align-top">
+<ul class="space-y-1.5 font-label-caption text-label-caption text-secondary">
+<li class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-[14px]">block</span>
+                    단기 상업입찰 참가 불가
+                  </li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[14px]">chevron_right</span>
+                    DEF(AUST) 통신 인터페이스 분석
+                  </li>
+</ul>
+</td>
+</tr>
+<!-- Row 5: Ghost Shark XL-AUV -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-5 px-6 align-top">
+<div class="font-headline-sm text-headline-sm text-on-surface">Ghost Shark XL-AUV</div>
+<div class="font-label-code text-label-code text-secondary mt-0.5">자율 수중 전투 체계</div>
+<div class="mt-2.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-code text-[11px]">
+<span class="material-symbols-outlined text-[12px]">hourglass_top</span>
+                    실전 배치 및 양산 진입
+                  </span>
+</div>
+</td>
+<td class="py-5 px-6 align-top leading-relaxed text-on-surface-variant">
+<div class="space-y-2">
+<p>호주 국방과학기술그룹(DSTG) 및 Anduril 공동 개발 완료 후 초기 양산 라인 가동.</p>
+<div class="p-2 rounded bg-surface-container-low font-label-code text-[11px] text-secondary">
+                    급속 획득(Rapid Prototyping) 모델로 상용 IT/소프트웨어 아키텍처 대거 채택.
+                  </div>
+</div>
+</td>
+<td class="py-5 px-6 align-top leading-relaxed text-on-surface-variant">
+<strong class="text-on-surface font-semibold">특수 침수 센서 하우징, 부력재 가공, 배터리 충전 데크 스테이션.</strong>
+<p class="mt-1 text-secondary">
+                  Anduril의 상용 융합 공급망 특성을 고려하여 기존 군납 기준 외에도 가격경쟁력을 갖춘 고성능 정밀부품사 협력 유효.
+                </p>
+</td>
+<td class="py-5 px-6 align-top">
+<ul class="space-y-1.5 font-label-caption text-label-caption text-secondary">
+<li class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-status-verified text-[14px]">check</span>
+                    Anduril 미국/호주 협력사 등록
+                  </li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[14px]">chevron_right</span>
+                    해저 압력챔버 실증 데이터
+                  </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- SECTION 5: ROADMAP & INTERACTIVE GO/NO-GO AUDIT -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg mb-space-xl">
+<!-- 5A: Execution Roadmap Timeline (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col justify-between">
+<div class="mb-space-md">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">timeline</span>
+<span class="font-label-tag text-label-tag text-secondary uppercase tracking-wider">Implementation Roadmap</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+          3단계 현지 진출 실행 로드맵
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          승인공급자 자격 취득부터 장기 수명주기 지원(Sovereign Sustainment)까지 시간대별 마일스톤.
+        </p>
+</div>
+<!-- Vertical Roadmap Rail -->
+<div class="relative pl-6 space-y-8 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-high">
+<!-- Milestone 1 -->
+<div class="relative">
+<div class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-status-analytical flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+</div>
+<div class="p-5 rounded-lg bg-surface-card shadow-sm">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-code text-label-code text-status-analytical font-bold">Phase 1 · 0 ~ 12개월</span>
+<span class="font-label-tag text-[11px] px-2 py-0.5 rounded bg-status-analytical-bg text-status-analytical">사전 준비 및 감사</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">
+              역량표 작성 &amp; 호주 규제 매핑
+            </h4>
+<ul class="space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<li>• 기업별 호주 표준 규격(Quad Zero 등) 대응 역량표(Capability Statement) 제작</li>
+<li>• ICN Gateway 등록 및 최신 공개 AIC 세부 패키지 전수 모니터링</li>
+<li>• 호주 현지 파트너(JV 또는 라이선스 생산 협력업체) 1차 롱리스트 구성</li>
+<li>• 수출통제(방위사업청 전략물자관리원) 및 E/L 사전 심사 착수</li>
+</ul>
+</div>
+</div>
+<!-- Milestone 2 -->
+<div class="relative">
+<div class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-status-verify-needed flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+</div>
+<div class="p-5 rounded-lg bg-surface-card shadow-sm">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-code text-label-code text-status-verify-needed font-bold">Phase 2 · 12 ~ 36개월</span>
+<span class="font-label-tag text-[11px] px-2 py-0.5 rounded bg-status-verify-needed-bg text-status-verify-needed">인증 및 시범 납품</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">
+              승인공급자 자격 취득 &amp; 시험평가
+            </h4>
+<ul class="space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<li>• CASG 및 Prime(한화호주, BAE 등) 승인공급자(Approved Supplier) 등록 통과</li>
+<li>• 호주 국방보안인가(DISP) 최소 Entry/Level 1 등급 획득</li>
+<li>• 현지 공정 적합성 검증용 초도 시제품(First Article Inspection) 납품</li>
+<li>• 빅토리아주/애들레이드 현지 정비 창고 및 기술지원 사무소 개소</li>
+</ul>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="relative">
+<div class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-status-verified flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+</div>
+<div class="p-5 rounded-lg bg-surface-card shadow-sm">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-code text-label-code text-status-verified font-bold">Phase 3 · 36개월 이후</span>
+<span class="font-label-tag text-[11px] px-2 py-0.5 rounded bg-status-verified-bg text-status-verified">생태계 고착화</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">
+              장기 MRO 계약 &amp; 글로벌 공급망 편입
+            </h4>
+<ul class="space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<li>• 30년 주기 창정비 유지계약 체결 및 성능개량(Block Upgrade) 부품 공급</li>
+<li>• 호주 실적(Track Record)을 레버리지 삼아 파이브아이즈(AUKUS/Five Eyes) 공급망 교차 진출</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- 5B: Interactive Go/No-Go Checklist (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col">
+<div class="mb-space-md">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">fact_check</span>
+<span class="font-label-tag text-label-tag text-secondary uppercase tracking-wider">Strategic Gatekeeping</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+          의사결정 Go/No-Go 진단
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          수주 영업 투입 전 6개 핵심 요건에 대한 자사 적합성을 검토하십시오.
+        </p>
+</div>
+<div class="rounded-xl bg-surface-card p-6 shadow-sm flex flex-col justify-between flex-1">
+<div class="space-y-4" id="checklist-container">
+<!-- Question 1 -->
+<label class="flex items-start gap-3 p-3 rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer group">
+<input class="checklist-item mt-1 w-4 h-4 rounded text-primary focus:ring-secondary accent-primary" type="checkbox">
+<div class="flex flex-col">
+<span class="font-headline-sm text-[14px] text-on-surface group-hover:text-status-analytical transition-colors">1. 실 발주 개방 여부 확인</span>
+<span class="font-label-caption text-label-caption text-secondary">AIC 계획서 단순 수치가 아닌, ICN상 실제 Work Package로 공고되었는가?</span>
+</div>
+</label>
+<!-- Question 2 -->
+<label class="flex items-start gap-3 p-3 rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer group">
+<input class="checklist-item mt-1 w-4 h-4 rounded text-primary focus:ring-secondary accent-primary" type="checkbox">
+<div class="flex flex-col">
+<span class="font-headline-sm text-[14px] text-on-surface group-hover:text-status-analytical transition-colors">2. 중복 범위 분리 타당성</span>
+<span class="font-label-caption text-label-caption text-secondary">이미 현지 호주 기업(SME)에 독점 배정된 법정 필수 품목과 경합하지 않는가?</span>
+</div>
+</label>
+<!-- Question 3 -->
+<label class="flex items-start gap-3 p-3 rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer group">
+<input class="checklist-item mt-1 w-4 h-4 rounded text-primary focus:ring-secondary accent-primary" type="checkbox">
+<div class="flex flex-col">
+<span class="font-headline-sm text-[14px] text-on-surface group-hover:text-status-analytical transition-colors">3. 기술 규격 적합성 (DEF-AUST)</span>
+<span class="font-label-caption text-label-caption text-secondary">국방 군사규격(ASDEFCON, MIL-STD) 및 가혹환경(호주 내륙 고온) 실증 데이터를 보유했는가?</span>
+</div>
+</label>
+<!-- Question 4 -->
+<label class="flex items-start gap-3 p-3 rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer group">
+<input class="checklist-item mt-1 w-4 h-4 rounded text-primary focus:ring-secondary accent-primary" type="checkbox">
+<div class="flex flex-col">
+<span class="font-headline-sm text-[14px] text-on-surface group-hover:text-status-analytical transition-colors">4. 현지 수행/MRO 조직 역량</span>
+<span class="font-label-caption text-label-caption text-secondary">호주 현지 지사 또는 신뢰할 수 있는 현지 파트너 정비 기지 확보 계획이 있는가?</span>
+</div>
+</label>
+<!-- Question 5 -->
+<label class="flex items-start gap-3 p-3 rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer group">
+<input class="checklist-item mt-1 w-4 h-4 rounded text-primary focus:ring-secondary accent-primary" type="checkbox">
+<div class="flex flex-col">
+<span class="font-headline-sm text-[14px] text-on-surface group-hover:text-status-analytical transition-colors">5. 수출통제(ITAR/E/L) 리스크 해결</span>
+<span class="font-label-caption text-label-caption text-secondary">기술이전 및 지식재산권(IP) 공유에 대한 양국 정부의 법적 인가를 담보할 수 있는가?</span>
+</div>
+</label>
+<!-- Question 6 -->
+<label class="flex items-start gap-3 p-3 rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer group">
+<input class="checklist-item mt-1 w-4 h-4 rounded text-primary focus:ring-secondary accent-primary" type="checkbox">
+<div class="flex flex-col">
+<span class="font-headline-sm text-[14px] text-on-surface group-hover:text-status-analytical transition-colors">6. 장기 투자회수성(LCC 회수율)</span>
+<span class="font-label-caption text-label-caption text-secondary">초기 인증/설비 투자 비용을 5년 이상 수명주기 유지보수 매출로 보전 가능한가?</span>
+</div>
+</label>
+</div>
+<!-- Evaluation Outcome Card -->
+<div class="mt-6 p-4 rounded-lg bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-secondary">진단 완료율</span>
+<span class="font-label-code text-label-code text-primary font-bold" id="score-indicator">0 / 6 충족</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-2 rounded-full transition-all duration-300" id="score-bar" style="width: 0%"></div>
+</div>
+<div class="font-label-caption text-label-caption text-secondary mt-1" id="diagnostic-message">
+            항목을 체크하여 수주 추진 타당성을 진단하십시오.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: BILATERAL PARTNERSHIP & ACTION DISPATCH -->
+<section class="rounded-xl bg-surface-container-low p-8 flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">handshake</span>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+          호주 현지 사무국 실무 연계 및 벤더 등록 지원 데스크
+        </h3>
+<p class="font-body-sm text-body-sm text-secondary">
+          호주 국방능력획득유지단(CASG) 및 빅토리아·사우스오스트레일리아 주정부 방산관(Defence Advocate) 채널 연결
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 w-full md:w-auto">
+<a class="w-full md:w-auto text-center px-5 py-2.5 rounded-lg bg-surface-card hover:bg-surface text-on-surface font-body-sm transition-colors shadow-sm" href="index.html">
+        ICN 포털 등록 가이드
+      </a>
+<a class="w-full md:w-auto text-center px-5 py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-inverse-surface font-body-sm transition-colors shadow-sm" href="index.html">
+        전략팀 실무 문의
+      </a>
+</div>
+</section>
+<!-- Interactive Logic Script -->
+<script>
+    (function initBriefingInteractions() {
+      const checkboxes = document.querySelectorAll('.checklist-item');
+      const scoreIndicator = document.getElementById('score-indicator');
+      const scoreBar = document.getElementById('score-bar');
+      const diagnosticMsg = document.getElementById('diagnostic-message');
+
+      function updateChecklist() {
+        const total = checkboxes.length;
+        let checkedCount = 0;
+        checkboxes.forEach(cb => {
+          if (cb.checked) checkedCount++;
+        });
+
+        const percent = Math.round((checkedCount / total) * 100);
+        scoreIndicator.textContent = checkedCount + ' / ' + total + ' 충족';
+        scoreBar.style.width = percent + '%';
+
+        if (checkedCount === 0) {
+          diagnosticMsg.textContent = '항목을 체크하여 수주 추진 타당성을 진단하십시오.';
+          scoreBar.className = 'bg-primary h-2 rounded-full transition-all duration-300';
+        } else if (checkedCount <= 2) {
+          diagnosticMsg.textContent = '경고: 사전 검토 부족. 독자 진입 시 매몰비용 발생 위험이 큽니다.';
+          scoreBar.className = 'bg-status-unverified h-2 rounded-full transition-all duration-300';
+        } else if (checkedCount <= 4) {
+          diagnosticMsg.textContent = '주의: 조건부 추진. 취약 항목(규격/수출통제) 보완 후 접근하십시오.';
+          scoreBar.className = 'bg-status-verify-needed h-2 rounded-full transition-all duration-300';
+        } else {
+          diagnosticMsg.textContent = '양호: 사업화 추진 권고. 현지 벤더 등록 및 공식 패키징 입찰 착수 가능.';
+          scoreBar.className = 'bg-status-verified h-2 rounded-full transition-all duration-300';
+        }
+      }
+
+      checkboxes.forEach(cb => {
+        cb.addEventListener('change', updateChecklist);
+      });
+
+      // Export / Print button trigger
+      const exportBtn = document.getElementById('btn-export-pdf');
+      if (exportBtn) {
+        exportBtn.addEventListener('click', () => {
+          window.print();
+        });
+      }
+
+      // Filter Toggle Mock
+      const filterBtn = document.getElementById('btn-toggle-filters');
+      if (filterBtn) {
+        filterBtn.addEventListener('click', () => {
+          alert('현재 2026-11 기준 LAND, SEA, AIR, AUTONOMOUS 4대 도메인 전체 데이터가 교차검증 필터링되어 활성화되어 있습니다.');
+        });
+      }
+    })();
+  </script>
+</div></div></main><footer class="w-full bg-surface-container-low mt-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="max-w-6xl mx-auto px-8 py-12 flex flex-col gap-8"><div class="flex flex-col lg:flex-row lg:items-start justify-between gap-6"><div class="space-y-2 max-w-xl"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[18px]">verified</span><span class="font-label-tag text-label-tag text-secondary uppercase">공식 데이터 출처 및 감사 기준</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">본 브리핑 리포트는 호주 국방부 2026 국방산업개발전략(DIDS26), 호주 산업참여계획(Australian Industry Capability - AIC), 국방능력획득유지단(CASG) 공시 지침 및 국방 예산 지출 공개 명세를 토대로 분석·편찬되었습니다.</p></div><div class="flex flex-col sm:flex-row gap-4 font-label-code text-label-code text-secondary"><div class="px-4 py-3 rounded-lg bg-surface-card"><span class="text-on-surface font-semibold block mb-0.5">CASG Reference No.</span>AUS-DEF-2026-AIC-774</div><div class="px-4 py-3 rounded-lg bg-surface-card"><span class="text-on-surface font-semibold block mb-0.5">Classification</span>UNCLASSIFIED / STRATEGIC BRIEF</div></div></div><div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pt-6"><p class="font-label-caption text-label-caption text-on-surface-variant">© 2026 호주 국방 산업참여 전략 브리핑 (ADIS). All rights reserved. 본 자료는 기업 의사결정 지원을 위한 전략 분석 브리핑이며, 최종 입찰 및 법적 계약 효력은 호주 연방정부 국방조달 공식 공고문을 우선합니다.</p><div class="flex items-center gap-6 shrink-0"><a class="font-label-caption text-label-caption text-secondary hover:text-on-surface transition-colors" href="index.html">정보이용 및 면책조항</a><a class="font-label-caption text-label-caption text-secondary hover:text-on-surface transition-colors" href="index.html">CASG/AIC 감사 가이드</a></div></div></div></footer></body></html>
